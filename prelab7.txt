@@ -1,0 +1,28 @@
+System that needs to be solved is the equation a = inv(V)@y
+This will yield the a coefficients that make up the interpolation polynomial
+
+Code to find the Vandermonde matrix can be taken from Homework 4
+
+import numpy as np
+
+f = lambda x: FUNCTION
+
+x = np.arange(RANGE)
+F = np.zeros(N)
+
+for i in range(N):
+    F[i] = f(x[i])
+
+
+rows = N
+cols = N
+ 
+V = [[0 for _ in range(cols)] for _ in range(rows)]
+
+for i in range(N):
+    for j in range(N):
+        V[i][j] = x[i]**j
+
+For the remainder of the lab, the goal is to explore different interpolation methods (Legrange, Newton-Divided
+, etc) and see how they fit with different N values. Then we will explore Chebechev points and how they reduce
+error created from the Runge phenomena
